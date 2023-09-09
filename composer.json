@@ -1,0 +1,46 @@
+{
+    "name": "greg/portfolio",
+    "repositories": [
+        {
+        "type": "composer",
+        "url": "https://wpackagist.org",
+        "only": [
+            "wpackagist-plugin/*",
+            "wpackagist-theme/*"
+            ]
+        }
+    ],      
+    "description": "WordPress Portfolio Websites",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Gregory Paul Rothstein",
+            "email": "g.p.rothstein@gmail.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^6.3",
+        "wpackagist-plugin/wp-migrate-db": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "extra": {
+        "wordpress-install-dir": "public",
+        "installer-paths": {
+            "public/wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "public/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "public/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}
