@@ -1,33 +1,35 @@
 # Exclude IDE Files
 .idea
+
 # Exclude composer dependencies in the vendor directory
 /vendor
 
+# Exclude Node modules directory
+/node_modules/
+
 # Exclude Wordpress Core
-!/public/
-/public/wp-includes/
-/public/wp-admin/
-/public/composer.json
-/public/index.php
-/public/license.txt
-/public/readme.html
-/public/wp-*.php
-/public/xmlrpc.php
+/wp-includes/
+/wp-admin/
+index.php
+license.txt
+readme.html
+wp-*.php
+xmlrpc.php
 
 # Include wp-content, then exclude each of the subdirectories
-!/wordpress/wp-content
-/wordpress/wp-content/*
+!/wp-content
+/wp-content/*
 
 ## Themes: include wp-content/themes directory, exclude all subdirectories except those specified
-!/public/wp-content/themes/
-/public/wp-content/themes/*
+!/wp-content/themes/
+/wp-content/themes/*
 
 # Include custom themes here
-!/public/wp-content/themes/index.php
+!/wp-content/themes/portfolio2023
 
 ## Plugins: include the wp-content/plugins directory, exclude all subdirectories except those specified
-!/public/wp-content/plugins/
-/public/wp-content/plugins/*
+!/wp-content/plugins/
+/wp-content/plugins/*
 
 # Include custom plugins here
-!/public/wp-content/plugins/hello.php
+
