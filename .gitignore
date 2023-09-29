@@ -1,35 +1,27 @@
-# Exclude IDE Files
-.idea
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentythree/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
 
-# Exclude composer dependencies in the vendor directory
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
 /vendor
 
-# Exclude Node modules directory
-/node_modules/
-
-# Exclude Wordpress Core
-/wp-includes/
-/wp-admin/
-index.php
-license.txt
-readme.html
-wp-*.php
-xmlrpc.php
-
-# Include wp-content, then exclude each of the subdirectories
-!/wp-content
-/wp-content/*
-
-## Themes: include wp-content/themes directory, exclude all subdirectories except those specified
-!/wp-content/themes/
-/wp-content/themes/*
-
-# Include custom themes here
-!/wp-content/themes/portfolio2023
-
-## Plugins: include the wp-content/plugins directory, exclude all subdirectories except those specified
-!/wp-content/plugins/
-/wp-content/plugins/*
-
-# Include custom plugins here
-
+# WP-CLI
+wp-cli.local.yml

@@ -814,7 +814,7 @@
     color: inherit;
     font-weight: 500;
     position: relative;
-    border: 3px solid var(--color-black);
+    border: 3px solid var(--color-black) !important;
     box-shadow: var(--box-shadow-1);
     display: flex;
     align-self: flex-start;
