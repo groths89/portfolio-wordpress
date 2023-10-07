@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
 </body>
-<script type="application/javascript">
+<!-- <script type="application/javascript">
     const body = document.getElementById('body');
     const sections = document.querySelectorAll('.section');
     const sectBtns = document.querySelectorAll('.controls');
@@ -87,6 +87,6 @@
     }
 
     pageTransitions();
-</script>
+</script> -->
 
 </html>

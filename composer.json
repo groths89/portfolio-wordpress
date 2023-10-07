@@ -43,6 +43,7 @@
     "wpackagist-theme/twentytwentythree": "^1.0",
     "wpackagist-plugin/wordpress-seo": "^21.2",
     "wpackagist-plugin/advanced-custom-fields": "^6.2",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo":"^3.1",
     "wpackagist-plugin/fluentform": "^5.0",
     "wpackagist-plugin/hummingbird-performance": "^3.5",
     "wpackagist-plugin/wp-smushit": "^3.14"
