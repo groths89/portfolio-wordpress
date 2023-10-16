@@ -1,5 +1,9 @@
 <?php 
+global $post;
+$projects = new WP_Query(array( 'post_type' => 'project' ));
+$skills = new WP_Query(array( 'post_type' => 'skill' )); 
 $about = get_field('about');
+$skill = get_field('skill');
 ?>
 
 <section class="section sec2 about" id="about">
@@ -14,85 +18,64 @@ $about = get_field('about');
             <div class="right-about">
                 <div class="about-item">
                     <div class="abt-text">
-                        <p class="large-text">560+</p>
+                        <p class="large-text">
+                            <?php
+                            if($projects->have_posts()) {
+                                $count_projects = wp_count_posts('project')->publish;
+                                echo $count_projects;
+                            }
+                            ?>
+                        </p>
                         <p class="small-text">Projects <br> Completed</p>
                     </div>
                 </div>
                 <div class="about-item">
                     <div class="abt-text">
                         <p class="large-text">560+</p>
-                        <p class="small-text">Projects <br> Completed</p>
+                        <p class="small-text">Skills <br> Learned</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="abt-text">
+                        <p class="large-text">
+                            <?php 
+                            $count = wp_count_posts('post')->publish;
+                            echo $count;
+                            ?>
+                        </p>
+                        <p class="small-text">Blogs <br> Written</p>
                     </div>
                 </div>
                 <div class="about-item">
                     <div class="abt-text">
                         <p class="large-text">560+</p>
-                        <p class="small-text">Projects <br> Completed</p>
-                    </div>
-                </div>
-                <div class="about-item">
-                    <div class="abt-text">
-                        <p class="large-text">560+</p>
-                        <p class="small-text">Projects <br> Completed</p>
+                        <p class="small-text">Cups of Coffee <br> Drank</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="about-stats">
+        <?php if ( $skills->have_posts() ) : ?>
+
+        <?php while ( $skills->have_posts() ): $skills->the_post(); 
+        if( $skill ):
+        ?>
             <!-- Programming Skills -->
             <h4 class="stat-title">Programming Skills</h4>
+            <?php if ($skill['category'] === 'Programming Skills') : ?>
             <div class="progress-bars">
-                <!-- Angular Framework -->
                 <div class="progress-bar">
-                    <p class="progress-title">Angular</p>
+                    <p class="progress-title"><?php echo $skill['title']; ?></p>
                     <div class="progress-container">
-                        <p class="progress-text">90%</p>
+                        <p class="progress-text"><?php echo $skill['percentage']; ?></p>
                         <div class="progress">
-                            <span class="angular"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- React Framework -->
-                <div class="progress-bar">
-                    <p class="progress-title">React</p>
-                    <div class="progress-container">
-                        <p class="progress-text">20%</p>
-                        <div class="progress">
-                            <span class="react"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="progress-title">vanilla javascript</p>
-                    <div class="progress-container">
-                        <p class="progress-text">90%</p>
-                        <div class="progress">
-                            <span class="javascript"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="progress-title">typescript</p>
-                    <div class="progress-container">
-                        <p class="progress-text">90%</p>
-                        <div class="progress">
-                            <span class="typescript"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="progress-title">php</p>
-                    <div class="progress-container">
-                        <p class="progress-text">90%</p>
-                        <div class="progress">
-                            <span class="php"></span>
+                            <span class="<?php $skill['class']; ?>"></span>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <?php endif; ?>
             <h4 class="stat-title">Markup Skills</h4>
             <div class="progress-bars">
                 <!-- HTML -->
@@ -260,6 +243,12 @@ $about = get_field('about');
                     </div>
                 </div>
             </div>
+        <?php endif; ?>
+        <?php endwhile; ?>
+
+        <?php wp_reset_postdata(); ?>
+
+        <?php endif; ?>
         </div>
 
         <h4 class="stat-title">My Timeline</h4>

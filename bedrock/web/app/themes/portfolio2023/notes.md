@@ -1,6 +1,6 @@
 Different Post Types
 
-- Skills Post Type (maybe seperate out the categories)
+- Skills Post Type (maybe separate out the categories)
 - Timeline Events Post Type
 - Projects Post Type
 

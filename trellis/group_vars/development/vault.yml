@@ -5,6 +5,6 @@ vault_mysql_root_password: devpw
 # Note: the site name (`example.com`) must match up with the site name in the above file.
 vault_wordpress_sites:
   portfolio.local:
-    admin_password: admin
+    admin_password: jtSyF75h5jqZ
     env:
-      db_password: example_dbpassword
+      db_password: kGEKvzMpkCK7

@@ -9,7 +9,6 @@ get_header();
     <?php get_template_part('partials/portfolio', 'section'); ?>
     <?php get_template_part('partials/blogs', 'section'); ?>
     <?php get_template_part('partials/contacts', 'section'); ?>
-    <?php get_template_part('partials/something', 'section'); ?>
 </main>
 
 <!-- Controls Div of the Webpage -->
