@@ -220,7 +220,7 @@ $skill = get_field('skill');
                     <div class="progress-container">
                         <p class="progress-text">20%</p>
                         <div class="progress">
-                            <span class="prblem_solving"></span>
+                            <span class="problem_solving"></span>
                         </div>
                     </div>
                 </div>
