@@ -28,6 +28,10 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/groths89/wp-portfolio-theme.git"
     }
   ],
   "require": {
@@ -46,7 +50,8 @@
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo":"^3.1",
     "wpackagist-plugin/fluentform": "^5.0",
     "wpackagist-plugin/hummingbird-performance": "^3.5",
-    "wpackagist-plugin/wp-smushit": "^3.14"
+    "wpackagist-plugin/wp-smushit": "^3.14",
+    "groths89/wp-portfolio-theme": "1.0.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
