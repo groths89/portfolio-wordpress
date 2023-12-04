@@ -60,3 +60,13 @@ See the [Bedrock installation documentation](https://roots.io/bedrock/docs/insta
 - Follow [@rootswp on Twitter](https://twitter.com/rootswp)
 - Read the [Roots Blog](https://roots.io/blog/)
 - Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
+
+## Installation
+
+- Create a Lightsail Instance with a LAMP Blueprint
+- Attach a Static IP address to Instance
+- Remove default website from the apache2 directory (this will make a clean working directory for the website)
+- Clone the GitHub repository to the apache2 directory (this will get the composer.json file on to the server)
+- Install Composer dependencies on to the server (this will get the WordPress core and all of its dependencies for the website including the custom theme and the various plugins)
+- I need to copy a .env file from somewhere secure to the root directory (this will tell wordpress the name of the database and all of that information)
+- I need to tell nginx/apache (the web server) to look in `web` directory to find the `index.php` file (this will allow the website to go to `/wp/wp-admin` to set up the site and database)
